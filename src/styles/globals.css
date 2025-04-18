@@ -1,5 +1,13 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'Inter';
+  src: url('/static/font/Inter/Inter-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
 @layer base {
   :root {
     --background: #fff;
@@ -39,6 +47,13 @@
     --ring: #020817;
 
     --radius: 0.8rem;
+
+    .font-outline-2 {
+      -webkit-text-stroke: 0.5px black;
+    }
+    .font-outline-4 {
+      -webkit-text-stroke: 4px black;
+    } 
   }
 
   html,
@@ -46,6 +61,7 @@
     font-size: 10px;
     background-color: var(--snow);
     line-height: 1;
+    font-family: 'Inter', sans-serif;
   }
 }
 
