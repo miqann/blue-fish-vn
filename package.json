@@ -9,8 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@floating-ui/react": "^0.27.7",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "downshift": "^9.0.9",
     "framer-motion": "^12.7.4",
     "lodash": "^4.17.21",
     "lodash-es": "^4.17.21",
