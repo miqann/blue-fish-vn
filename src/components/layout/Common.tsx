@@ -1,20 +1,32 @@
 import Footer from "../footer/Footer";
-import Header from "../header/Header";
+import { StickyHeader } from "../header/StickyHeader";
 
 interface CommonProps {
+  navList?: React.ReactNode;
   children?: React.ReactNode;
-  topHeaderBg?: "transparent" | "white";
+  className?: string;
+  cartButton?: React.ReactNode;
   searchGear?: React.ReactNode;
+  topHeaderBg?: "transparent" | "white";
 }
 
 export default function Common({
+  navList,
   children,
-  topHeaderBg,
+  className,
+  cartButton,
   searchGear,
+  topHeaderBg,
 }: CommonProps) {
   return (
     <div>
-      <Header topHeaderBg={topHeaderBg} searchGear={searchGear} />
+      <StickyHeader
+        navList={navList}
+        className={className}
+        cartButton={cartButton}
+        searchGear={searchGear}
+        topHeaderBg={topHeaderBg}
+      />
       <main>{children}</main>
       <Footer />
     </div>

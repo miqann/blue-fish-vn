@@ -8,7 +8,7 @@ export default function Home() {
       <Head>
         <title>Bluefinsvn</title>
       </Head>
-      <Common topHeaderBg="transparent">
+      <Common topHeaderBg="transparent" className="justify-center">
         <StaticPost />
       </Common>
     </>

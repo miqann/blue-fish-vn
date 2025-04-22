@@ -25,12 +25,16 @@ interface HeaderProps {
   topHeaderBg?: VariantProps<typeof headerVariant>["background"];
   searchGear: React.ReactNode;
   cartButton?: React.ReactNode;
+  className?: string;
+  navList?: React.ReactNode;
 }
 
 export function StickyHeader({
   topHeaderBg,
   searchGear,
   cartButton,
+  className,
+  navList,
 }: HeaderProps) {
   const [bg, setBg] = useState(topHeaderBg);
   const { scrollY } = useScroll();
@@ -52,7 +56,7 @@ export function StickyHeader({
       <Image
         src={"/static/icon/bluefins-icon.png"}
         className="min-w-[65px] cursor-pointer"
-        alt="Bluefishvn"
+        alt="Bluefinsvn"
         width={200}
         height={40}
       />
@@ -61,11 +65,12 @@ export function StickyHeader({
 
   return (
     <header className={cn(headerVariant({ background: bg }))}>
-      <div className="flex w-full items-center justify-center">
+      <div className={`flex w-full items-center ${className}`}>
         <RenderHeader
           desktop={
             <>
               {logo}
+              {navList}
               {searchGear}
               {cartButton}
             </>
